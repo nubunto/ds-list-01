@@ -3,7 +3,7 @@
 #include <string.h>
 
 typedef struct Worker {
-    char name [256];
+    char name[256];
     int code;
     float total_sales;
     float salary;

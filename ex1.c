@@ -9,8 +9,6 @@ void switcher(int *a, int *b, int *c) {
 	if (largest < *c) {
 		largest = *c;
 	}
-	printf("largest: %d\n", largest);
-
 	int min = *a;
 	if (min > *b) {
 		min = *b;
@@ -18,7 +16,6 @@ void switcher(int *a, int *b, int *c) {
 	if (min > *c) {
 		min = *c;
 	}
-	printf("min: %d\n", min);
 	int middle = 0;
 	if (*a < largest && *a > min) {
 		middle = *a;
@@ -27,7 +24,6 @@ void switcher(int *a, int *b, int *c) {
 	} else if (*c < largest && *b > min) {
 		middle = *b;
 	}
-	printf("middle: %d\n", middle);
 	*a = largest;
 	*b = middle;
 	*c = min;
@@ -38,9 +34,12 @@ int main() {
 	a = malloc(sizeof(int));
 	b = malloc(sizeof(int));
 	c = malloc(sizeof(int));
-	*a = 5;
-	*b = 21;
-	*c = -4;
+	printf("Digite A: ");
+	scanf("%d", a);
+	printf("Digite B: ");
+	scanf("%d", b);
+	printf("Digite C: ");
+	scanf("%d", c);
 	switcher(a, b, c);
 	printf("A: %d  B: %d  C: %d\n", *a, *b, *c);
 }
